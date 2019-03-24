@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>Charts</title>
+	<style>
+	#canvaz {
+		margin: auto;
+		display: block;
+	}
+	html {
+		min-height: 100%;
+	}
+	body {
+ 		min-height: 100%;
+  		margin: 0;
+ 		padding: 0;
+		overflow: hidden;
+	}
+	
+	.rounded {
+		display: table;
+		border-radius: 100px;
+		height: 60px;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 200%;
+		top:calc(55% + 300px);
+	}
+	.in {
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 70px
+	}
+	#switcher {
+		position: relative;
+		font-size: 300%;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		color:#3da6eb;
+		bottom:12%;
+		text-align: center;
+	}
+	#nxt {
+		position: absolute;
+		font-size: 200%;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		color:#3da6eb;
+		left: 50px;
+	}
+	#info {
+		position: absolute;
+		width: 300px;
+		font-size: 170%;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		top: 20%;
+	}
+	.val {
+		margin-left:15px;
+		margin-top:15px;
+	}
+	</style>
+</head>
+<body id = bd style="background-color:white">
+<p id ="nxt" onclick="next()"><b>Next</b></p>
+<canvas id="canvaz"></canvas>
+<div class="rounded" style="position: absolute;border: 3px solid #d8dde4;width:140px;left:30px" onclick="switcher(0)"><div class="in">#1</div></div>
+<div class="rounded" style="position: absolute;border: 3px solid #d8dde4;width:140px;left:230px" onclick="switcher(1)"><div class="in">#2</div></div>
+<div class="rounded" style="position: absolute;border: 3px solid #d8dde4;width:140px;left:430px" onclick="switcher(2)"><div class="in">#3</div></div>
+<div class="rounded" style="position: absolute;border: 3px solid #d8dde4;width:140px;left:630px" onclick="switcher(3)"><div class="in">#4</div></div>
+<div id = "info" style="background-color: white;border: 3px solid silver;visibility: hidden">
+	<p id = "date" style="margin-left:15px;margin-top:15px"></p>
+	<p class="val"></p>
+	<p class="val"></p>
+	<p class="val"></p>
+	<p class="val"></p>
+</div>
+<p id=switcher>Switch to Night Mode</p>
+<script src="charts.js"></script>
+</body>
+</html>
